@@ -1,4 +1,5 @@
 require('dotenv').config();
+require("@nomiclabs/hardhat-ethers");
 require("@nomiclabs/hardhat-waffle");
 
 const ALCHEMY_API_KEY = process.env.ALCHEMY_API_KEY;
@@ -12,7 +13,7 @@ module.exports = {
   defaultNetwork: "hardhat",
   networks: {
     hardhat: {
-      chainId: 1337,
+      chainId: 31337,
     },
     // ropsten: {
     //   url: `https://eth-ropsten.alchemyapi.io/v2/${ALCHEMY_API_KEY}`,

@@ -6,7 +6,7 @@ async function main() {
 
   const CorgiTokenICO = await ethers.getContractFactory('CorgiTokenICO');
 
-  const initialDepositAccount = '0xeAB7A5228Ee66ccF8CF5BBb1a1A0024E7a5A4d4d'
+  const initialDepositAccount = '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266'
   const corgiTokenICO  = await CorgiTokenICO.deploy(initialDepositAccount);
   
   console.log("CorgiTokenICO contract address:", corgiTokenICO.address);

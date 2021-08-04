@@ -11,7 +11,7 @@ contract CorgiToken is ERC20 {
 
   constructor() ERC20('CorgiToken', 'CORGI') {
     founder = payable(msg.sender);
-    initialSupply = 10000;
+    initialSupply = 50000;
     _mint(founder, initialSupply);
   }
 }
@@ -21,12 +21,12 @@ contract CorgiTokenICO is CorgiToken {
   address public admin;
   address payable public depositAddr;
   uint public tokenPrice = 0.01 ether; // 1 ETH = 100 CORGI, 1 CORGI = 0.01
-  uint public hardCap = 60 ether;
+  uint public hardCap = 300 ether;
   uint public raisedAmount; // value in wei
   uint public saleStart = block.timestamp;
   uint public saleEnd = block.timestamp + 604800; // one week
 
-  uint public maxInvestment = 3 ether;
+  uint public maxInvestment = 20 ether;
   uint public minInvestment = 0.1 ether;
 
   enum State { beforeStart, running, afterEnd, halted } // ICO states
@@ -57,7 +57,7 @@ contract CorgiTokenICO is CorgiToken {
     depositAddr = newDepositAddr;
   }
 
-  function _getCurrentState() private view returns (State) {
+  function getCurrentState() public view returns (State) {
     if (icoState == State.halted) {
       return State.halted;
 
@@ -76,7 +76,7 @@ contract CorgiTokenICO is CorgiToken {
 
   // Function called when sending eth to the contract
   function invest() payable public returns (bool) {
-    icoState = _getCurrentState();
+    icoState = getCurrentState();
     require(icoState == State.running);
     require(msg.value >= minInvestment && msg.value <= maxInvestment, 'Please invest a valid amount');
 
