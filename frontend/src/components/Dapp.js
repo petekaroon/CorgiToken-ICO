@@ -306,35 +306,35 @@ function Dapp() {
       <section className="info-tiles mx-4">
         <div className="tile is-ancestor has-text-centered">
           <div className="tile is-parent is-3">
-          <article className="tile is-child box">
-            <p className="subtitle">ICO Status</p>
-            {icoState === 'Live' && 
-              <span className="tag is-success is-medium">
-                <b>{icoState}</b>
-              </span>}
-            {icoState !== 'Live' && 
-              <span className="tag is-danger is-medium">
-                <b>{icoState}</b>
-              </span>}
-          </article>
-        </div>
+            <article className="tile is-child box">
+              <p className="subtitle">ICO Status</p>
+              {icoState === 'Live' && 
+                <span className="tag is-success is-medium">
+                  <b>{icoState}</b>
+                </span>}
+              {icoState !== 'Live' && 
+                <span className="tag is-danger is-medium">
+                  <b>{icoState}</b>
+                </span>}
+            </article>
+          </div>
       
-      <div className="tile is-parent is-3">
-          <article className="tile is-child box">
-            <p className="subtitle">Total Funded</p>
-            <span className="tag is-warning is-medium">
-              <b>{raisedAmount} ETH</b>
-            </span>
-          </article>
-        </div>
+          <div className="tile is-parent is-3">
+            <article className="tile is-child box">
+              <p className="subtitle">Total Funded</p>
+              <span className="tag is-warning is-medium">
+                <b>{raisedAmount} ETH</b>
+              </span>
+            </article>
+          </div>
         
-        <div className="tile is-parent is-6">
-          <article className="tile is-child box">
-            <p className="subtitle">To fund the project, transfer ETH to</p>
-            <span className="tag is-link is-medium">
-              <b>{contractAddr}</b>
-            </span>
-          </article>
+          <div className="tile is-parent is-6">
+            <article className="tile is-child box">
+              <p className="subtitle">To fund the project, transfer ETH to</p>
+              <span className="tag is-link is-medium">
+                <b>{contractAddr}</b>
+              </span>
+            </article>
           </div>
         </div>
       </section>
