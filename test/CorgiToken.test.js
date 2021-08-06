@@ -11,7 +11,7 @@ describe('Token Contract Deployment', () => {
 
     const founderBalance = await corgiToken.balanceOf(founder.address);
     expect((await corgiToken.totalSupply()).toString()).to.equal(founderBalance.toString());
-    expect(founderBalance.toString()).to.equal('10000');
+    expect(founderBalance.toString()).to.equal('50000');
   });
 });
 
@@ -93,7 +93,7 @@ describe('ICO Contract', () => {
     it('Should revert with - Please invest a valid amount', async () => {
       await expect(user1.sendTransaction({
         to: corgiTokenICO.address,
-        value: ethers.utils.parseEther('5.0'), // Sends 5 ether
+        value: ethers.utils.parseEther('25.0'), // Sends 25 ether
       })).to.be.revertedWith('Please invest a valid amount');
     });
   });

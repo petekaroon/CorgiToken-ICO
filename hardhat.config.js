@@ -10,7 +10,6 @@ const ROPSTEN_PRIVATE_KEY = process.env.ROPSTEN_PRIVATE_KEY;
  */
 module.exports = {
   solidity: "0.8.0",
-  defaultNetwork: "hardhat",
   networks: {
     hardhat: {
       chainId: 31337,
