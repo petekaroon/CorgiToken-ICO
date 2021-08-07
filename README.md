@@ -22,5 +22,6 @@ An ERC-20 Token ICO Dapp, based on [OpenZeppelin](https://openzeppelin.com) ERC-
 
 ## Setup
 Please refer to the [Setup Guide](./documentations/setup_guide/setup_guide.md) for steps to setup in local development.
+
 ## License
 MIT
