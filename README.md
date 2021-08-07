@@ -1,5 +1,5 @@
 # Corgi Token ICO
-An ERC-20 Token ICO Dapp, based on [OpenZeppelin](https://openzeppelin.com) ERC-20 implementation. The project was developed and tested locally using [Hardhat](https://hardhat.org), an Ethereum development environment, with smart contracts written in Solidity. The Dapp was deployed to Ropsten test network, using [Alchemy](https://www.alchemy.com/) Blockchain API and Node service.
+An ERC-20 Token ICO Dapp, based on [OpenZeppelin](https://openzeppelin.com) ERC-20 implementation. The project was developed and tested locally using [Hardhat](https://hardhat.org) Ethereum development environment, with smart contracts written in Solidity. The Dapp was deployed to Ropsten test network, using [Alchemy](https://www.alchemy.com/) Blockchain API and Node service.
 
 > [Link to Demo Video](https://youtu.be/UTTg1AYhQ_Q)
 
