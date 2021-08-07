@@ -33,7 +33,7 @@ npm start
 
 7. You are ready to go!
 
-
+&nbsp;
 ## Ropsten Test Network Setup
 1. Install dependencies - at root folder, run command: 
 ```
