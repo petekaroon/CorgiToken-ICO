@@ -20,5 +20,7 @@ An ERC-20 Token ICO Dapp, based on [OpenZeppelin](https://openzeppelin.com) ERC-
 - UI Library - [React](https://reactjs.org)
 - CSS Library - [Bulma](https://bulma.io)
 
+## Setup
+Please refer to the [Setup Guide](./documentations/setup_guide/setup_guide.md) for steps to setup in local development.
 ## License
 MIT
