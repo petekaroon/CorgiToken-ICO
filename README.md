@@ -6,7 +6,7 @@ An ERC-20 Token ICO Dapp with implementation from [OpenZeppelin](https://openzep
 # ![corgi-ico-token](./documentations/screenshots/screenshot_1.png)
 
 ## Tech
-- Ethereum Development Environment - [Harhat](https://hardhat.org) / [ethers.js](https://docs.ethers.io/v5/) / [Waffle](https://ethereum-waffle.readthedocs.io/en/latest/index.html) / [Alchemy](https://www.alchemy.com/)
+- Ethereum Development Environment - [Harhat](https://hardhat.org) / [ethers.js](https://docs.ethers.io/v5/) / [Waffle](https://ethereum-waffle.readthedocs.io/en/latest/index.html) / [Alchemy](https://www.alchemy.com/) / [MetaMask](https://metamask.io)
 - Smart Contracts - [Solidity](https://docs.soliditylang.org/en/v0.8.6/) / [OpenZeppelin](https://openzeppelin.com)
 - Frontend - [React](https://reactjs.org) / [Bulma CSS](https://bulma.io)
 
