@@ -7,7 +7,7 @@ describe('Token Contract Deployment', () => {
   it('Deployment should assign all initial token supply to the founder', async () => {
     const [founder] = await ethers.getSigners();
     const CorgiToken = await ethers.getContractFactory('CorgiToken');
-    const corgiToken  = await CorgiToken.deploy();
+    const corgiToken = await CorgiToken.deploy();
 
     const founderBalance = await corgiToken.balanceOf(founder.address);
     expect((await corgiToken.totalSupply()).toString()).to.equal(founderBalance.toString());
@@ -26,10 +26,10 @@ describe('ICO Contract', () => {
   beforeEach(async () => {
     [admin, user1, user2, depositAcc] = await ethers.getSigners();
     CorgiTokenICO = await ethers.getContractFactory('CorgiTokenICO');
-    corgiTokenICO  = await CorgiTokenICO.deploy(depositAcc.address);
+    corgiTokenICO = await CorgiTokenICO.deploy(depositAcc.address);
   });
 
-  describe('Deployment', async () => {
+  describe('Deployment', () => {
     it('Should assign a valid address of deposit account', async () => {
       const depositAddress = await corgiTokenICO.depositAddr();
       expect(depositAddress).to.equal(depositAcc.address);
@@ -72,7 +72,7 @@ describe('ICO Contract', () => {
 
       let newDepositAccETHBalance = await ethers.provider.getBalance(depositAcc.address);
       newDepositAccETHBalance = ethers.BigNumber.from(newDepositAccETHBalance.toString());
- 
+
       const diffInDepositAccETHBalance = ethers.utils.formatEther(newDepositAccETHBalance.sub(depositAccETHBalance));
       expect(diffInDepositAccETHBalance).to.equal('2.0');
     });
@@ -84,8 +84,8 @@ describe('ICO Contract', () => {
         to: corgiTokenICO.address,
         value: ethers.utils.parseEther('2.0'), // Sends 2 ether
       }))
-      .to.emit(corgiTokenICO, 'Invest')
-      .withArgs(user1.address, ethers.utils.parseEther('2.0'), 200);
+        .to.emit(corgiTokenICO, 'Invest')
+        .withArgs(user1.address, ethers.utils.parseEther('2.0'), 200);
     })
   })
 
@@ -104,7 +104,7 @@ describe('ICO Contract', () => {
         to: corgiTokenICO.address,
         value: ethers.utils.parseEther('2.0'), // Sends 2 ether
       });
-      
+
       await corgiTokenICO.connect(user1).transfer(user2.address, 50);
       const user1Balance = await corgiTokenICO.balanceOf(user1.address);
       const user2Balance = await corgiTokenICO.balanceOf(user2.address);
